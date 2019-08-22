@@ -73,6 +73,24 @@ fs.readdir('./scripts/', (err, files) => {
 });
 
 /**
+ * Loading Events
+ */
+fs.readdir('./events/', (err, files) => {
+
+    if(err) console.error(err);
+
+    /* Collecting ONLY .js files */
+    let jsfiles = files.filter(f => f.split('.').pop() === 'js');
+    if (jsfiles.length <= 0) return console.warn('No .js file in \'events\' detected! Ignoring...');
+
+    /* Adding Event listener */
+    jsfiles.forEach((f, i) => {
+        let script = require(`./events/${f}`);
+        bot.on(script.trigger, script.run);
+    });
+});
+
+/**
  * Command Listener
  */
 bot.on('message', (msg) => {
