@@ -36,9 +36,9 @@ New-UDCounter -Title "Basic" -Endpoint {
 ## Setup
 ### 1. Create a new Discord Application  
 1. Create a new Application at [Discord Developer Portal][discord-developer-portal]  
-2. Add a Bot instance to you'r application.  
-3. Make a note of you'r Bot token. (Example: NTE3NzE0ODk2MjU1NzEzMzAx.XVv7BQ.OPJljSxqk7iaE4D19tW0WD-kiVQ)  
-4. Make a note of you'r Discord ID. (Example: 416358583220043796)  
+2. Add a Bot instance to your application.  
+3. Make a note of your Bot token. (Example: NTE3NzE0ODk2MjU1NzEzMzAx.XVv7BQ.OPJljSxqk7iaE4D19tW0WD-kiVQ)  
+4. Make a note of your Discord ID. (Example: 416358583220043796)  
   
 ### 2. Configure .env
 ```env
@@ -76,7 +76,7 @@ MASTER=<<YOUR USER ID>>
 The default entry will be copyed to every new guild.  
 
 ### 3. Customize with your own code  
-You can add you'r own code in ```./scripts```.  
+You can add your own code in ```./scripts```.  
 You can create your own custom commands in ```./commands```.  
 I've created a ```example.js``` file, so it's easy to create a new command.  
 The Bot will load it automatically.  
